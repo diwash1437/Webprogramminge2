@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Real-time Timer</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./src/style.css">
+
+
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="welcome-section" class="welcome-animation">
+        <h1 style="letter-spacing: 4px;">HI!</h1>
+        <p>Welcome to the game survey form!</p>
+    </div>
+
+
+
+    <div class="container hidden">
+
+        <div id="timer-banner">
+            <span id="timer"></span>
+        </div>
+
+        <div class="top">
+
+            <img src="./image/coc2.png" alt="" class="back-video">
+
+            <div class="imgbox">
+                <div class="box">
+                    <abbr title="DIWASH">
+                        <img src="./image/One piece.jpg" alt="">
+                    </abbr>
+                </div>
+            </div>
+
+            <div class="profileText">
+
+                <h3>GAMES SURVEY <br> FORM <br>
+                    <span>Web programming</span>
+                </h3>
+            </div>
+
+        </div>
+
+        <div class="form-container">
+            <form id="gaming-survey-form">
+
+                <!-- Text Boxes -->
+                <label for="name" class="fullname">Full Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <!-- Option Buttons -->
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" id="male" name="platform" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="platform" value="female">
+                    <label for="pc">Female</label><br>
+                </fieldset><br>
+
+
+                <label for="ageCategory" class="age">Age Category:</label>
+                <select id="ageCategory" name="ageCategory">
+                    <option value="under10">Under 10</option>
+                    <option value="10-16">10 - 16</option>
+                    <option value="17-27">17 - 27</option>
+                    <option value="28-37">28 - 37</option>
+                    <option value="38-47">38 - 47</option>
+                    <option value="over47">Over 47</option>
+                </select><br>
+
+                <!-- Drop-down Menu -->
+                <label for="favorite-genre" class="favorite-game">Favorite Game Genre:</label>
+                <select id="favorite-genre" name="favorite-genre">
+                    <option value="action">COC</option>
+                    <option value="action">Mobile Legend </option>
+                    <option value="action">Heroes Evolved </option>
+                    <option value="action">PUBG </option>
+                    <option value="action">Free Fire</option>
+                </select><br><br>
+
+                <!-- Option Buttons -->
+                <fieldset>
+                    <legend>Preferred Gaming Platform:</legend>
+                    <input type="radio" id="pc" name="platform" value="pc">
+                    <label for="pc">PC</label><br>
+                    <input type="radio" id="mobile" name="platform" value="mobile">
+                    <label for="pc">Mobile</label><br>
+                </fieldset><br>
+
+                <!-- Check Boxes -->
+                <fieldset>
+                    <legend>Game mode You Enjoy:</legend>
+                    <input type="checkbox" id="squad" name="feature" value="squad">
+                    <label for="squad">Squad</label><br>
+                    <input type="checkbox" id="duo" name="feature" value="duo">
+                    <label for="multiplayer">Duo</label><br>
+                    <input type="checkbox" id="Solo" name="feature" value="solo">
+                    <label for="multiplayer">Solo</label><br>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend> How satisfied are you with the playing on different mode*</legend>
+                    <table>
+                        <tr>
+                            <th></th>
+
+                            <th>Satisfied</th>
+                            <th>Neither satisfied nor dissatisfied</th>
+                            <th>Dissatisfied</th>
+                            <th>Very dissatisfied</th>
+                        </tr>
+                        <tr>
+                            <td>Solo Playing</td>
+                            <td><input type="radio" name="hardware" value="satisfied"></td>
+                            <td><input type="radio" name="hardware" value="neutral"></td>
+                            <td><input type="radio" name="hardware" value="dissatisfied"></td>
+                            <td><input type="radio" name="hardware" value="very_dissatisfied"></td>
+                        </tr>
+                        <tr>
+                            <td>Duo Playing</td>
+
+                            <td><input type="radio" name="localization" value="satisfied"></td>
+                            <td><input type="radio" name="localization" value="neutral"></td>
+                            <td><input type="radio" name="localization" value="dissatisfied"></td>
+                            <td><input type="radio" name="localization" value="very_dissatisfied"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Squad Playing</td>
+
+                            <td><input type="radio" name="localization" value="satisfied"></td>
+                            <td><input type="radio" name="localization" value="neutral"></td>
+                            <td><input type="radio" name="localization" value="dissatisfied"></td>
+                            <td><input type="radio" name="localization" value="very_dissatisfied"></td>
+                        </tr>
+                    </table>
+                </fieldset> <br>
+
+
+                <legend>Is there anything else you'd like to share about your gaming experience or preferences?</legend>
+                <textarea id="gamingExp" name="gamingExp"></textarea><br>
+
+
+
+
+                <!-- Scroll Bar (For a range input) -->
+                <label for="hours-played" class="hoursPlayed">Hours Played per Day:</label>
+                <input type="range" id="hours-played" name="hours-played" min="0" max="24" value="0">
+                <span id="hours-display">0</span> hours<br><br>
+
+                <label for="gmailAddress" class="gmail">Gmail Address:</label>
+                <input type="email" id="gmailAddress" name="gmailAddress" placeholder="example@gmail.com" required>
+
+
+                <label for="phoneNumber" class="phone">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1234567890"
+                    pattern="[+]{0,1}[0-9]{10,14}" required>
+
+
+                <div class="agreement">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to the <a href="terms.html" style="color: aqua;">Terms and
+                            Conditions</a>.</label><br><br>
+                </div>
+
+
+                <!-- Button -->
+                <button type="submit">Submit</button>
+
+
+
+            </form>
+
+
+            <!-- This is initially hidden using inline style -->
+            <div class="json-output-container" style="display: none;">
+                <label for="jsonOutput">Gaming survey Form:</label>
+                <textarea id="jsonOutput" name="jsonOutput" readonly></textarea>
+            </div>
+
+
+            <!-- form submit end -->
+        </div>
+
+
+
+        <!-- container end -->
+    </div>
+
+
+    <script src="gamevalidation.js"></script>
+</body>
+
+</html>
